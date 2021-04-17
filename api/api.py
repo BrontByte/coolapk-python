@@ -1,5 +1,4 @@
 import requests
-import random
 from .helper import get_request_hash, get_app_token
 from .models import User
 
@@ -72,7 +71,7 @@ def upload_avatar(user, image):
         image = open(image, 'rb')
 
     files = {
-        'imgFile': (str(random.random()), image, 'image/jpeg')
+        'imgFile': ('png.png', image, 'image/jpeg')
     }
     res = _base_post('/v6/account/changeAvatar',
                      cookies=user.__dict__, files=files)
