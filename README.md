@@ -19,7 +19,7 @@ $ python time_avatar.py
 ### 额外信息
 - 本代码从 [ikws4](https://github.com/ikws4/coolapk-python) 处fork而来
 - 修复了一个导致无法上传图像的bug
-
+- 将 utils/image.py 中的相对路径换成绝对路径
 
 *对api/api.py 第 75 行修改即可*
 
