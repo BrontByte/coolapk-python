@@ -5,7 +5,8 @@ from datetime import datetime
 
 def generate_image(text: str) -> bytes:
     img = Image.new('RGB', (640, 640), color=(255, 255, 255))
-    font = ImageFont.truetype('../assets/GoogleSans-Regular.ttf', 180)
+    path=str(__file__).replace('utils/modles.py','assets/GoogleSans-Regular.ttf')
+    font = ImageFont.truetype(path, 180)
     draw = ImageDraw.Draw(img)
     draw.text((114, 206), text, font=font, fill=(106, 99, 99))
 
