@@ -9,7 +9,7 @@ STORE = {}
 
 
 def upload_avatar_job():
-    img = image.generate_time_image()
+    img = image.generate_btc_image()
     now = datetime.now()
     user = STORE.get('user')
     print(f"upload avatar({now}): {api.upload_avatar(user, img)}")
